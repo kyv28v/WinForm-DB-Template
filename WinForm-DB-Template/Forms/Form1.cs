@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using WinForm_DB_Template.DB.Models;
+using static WinForm_DB_Template.Utilities.Utilities;
 
 namespace WinForm_DB_Template
 {
@@ -14,7 +14,7 @@ namespace WinForm_DB_Template
         {
             try
             {
-                using (var context = new TestContext())
+                using (var context = CreateDbContext())
                 {
                     //dataGridView1.DataSource = context.MItems.ToList();
                     dataGridView1.DataSource = context.ISales
