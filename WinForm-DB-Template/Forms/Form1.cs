@@ -40,6 +40,7 @@ namespace WinForm_DB_Template
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.ToString());
+                MessageBox.Show("DBデータの取得に失敗しました。\n\n" + ex.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
